@@ -1,1 +1,1 @@
-# big-data-analytics-frytki
+# Big data analytics frytki
