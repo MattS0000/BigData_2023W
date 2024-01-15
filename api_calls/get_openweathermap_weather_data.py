@@ -20,7 +20,7 @@ VARIABLES = {
     "snow": ["1h"],
 }
 
-API_TOKEN = "1831ed1e6c33f55208b017d8d10f4e3a"
+API_TOKEN = ""
 REQUEST_DELAY = 1
 
 # ---
