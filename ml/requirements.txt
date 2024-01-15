@@ -1,0 +1,2 @@
+apache_beam[gcp,dataframe]~=2.52
+scikit-learn == 1.3.2

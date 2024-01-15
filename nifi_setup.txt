@@ -1,0 +1,20 @@
+sudo su
+apt update -y
+apt install openjdk-8-jdk -y
+wget https://archive.apache.org/dist/nifi/1.16.0/nifi-1.16.0-bin.tar.gz
+tar -xzvf nifi-1.16.0-bin.tar.gz
+
+#vim edytowac properties recznie poki co - https://www.youtube.com/watch?v=V6YVx_qDFnI
+vim ./nifi-1.16.0/conf/nifi.properties
+./nifi-1.16.0/bin/nifi.sh start
+
+apt install python3-pip
+pip install --upgrade google-cloud-storage
+pip install pandas
+#recznie wrzucic skrypty poki co trzeba i servicekey stworzyc
+gsutil rsync -r gs://nifidata/scripts /home/cloud2023ezproject/scripts
+gsutil cp gs://nifidata/gcc2023-385607-877c281ee4ec.json /home/cloud2023ezproject/servicekey.json
+
+gsutil cp gs://nifidata/scripts/get_openmeteo_data.py /home/cloud2023ezproject/scripts/get_openmeteo_data.py
+#install python 3.9 and repeat installs
+# nifi is on http://34.118.38.119:8080/nifi/
